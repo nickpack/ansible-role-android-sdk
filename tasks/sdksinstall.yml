@@ -1,0 +1,4 @@
+---
+
+- name: Install Android SDKs for applicable releases
+  command: "{{ android_sdk_install_location }}/sdk-install.expect"

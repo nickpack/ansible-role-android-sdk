@@ -1,0 +1,5 @@
+---
+# tasks file for android-sdk
+- include: dependencies.yml
+- include: sdktools.yml
+- include: sdksinstall.yml

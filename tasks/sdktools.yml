@@ -1,0 +1,22 @@
+---
+
+- name: Ensure Android SDK tools directory exists
+  file: path={{ android_sdk_install_location }} state=directory
+
+- name: Download Android SDK tools
+  get_url: url={{ android_sdk_download_location }} dest={{ android_sdk_install_location }}/sdk-download.tgz
+
+- name: Extract Android SDK tools
+  unarchive: src={{ android_sdk_install_location }}/sdk-download.tgz dest={{ android_sdk_install_location }} copy=no
+
+- name: Put the SDK install expect script in place
+  template: src=sdk-install.expect.j2 dest={{ android_sdk_install_location }}/sdk-install.expect mode=0755
+
+- name: Change permissions on SDK tools
+  file: path={{ android_sdk_install_location }}/android-sdk-linux recurse=yes mode=0755
+
+- name: Set system wide PATH to contain Android SDK tools
+  lineinfile: dest=/etc/environment regexp=^PATH line='PATH="/usr/local/sbin:/usr/local/bin:{{ android_sdk_install_location }}/android-sdk-linux/build-tools/20.0.0:{{ android_sdk_install_location }}/android-sdk-linux/tools/:{{ android_sdk_install_location }}/android-sdk-linux/build-tools/:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games"'
+
+- name: Set system wide ANDROID_HOME environment variable
+  lineinfile: dest=/etc/environment regexp=^ANDROID_HOME line='ANDROID_HOME="{{ android_sdk_install_location }}/android-sdk-linux/"'

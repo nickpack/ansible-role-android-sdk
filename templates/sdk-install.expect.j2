@@ -1,0 +1,8 @@
+#!/usr/bin/expect
+
+set timeout -1;
+spawn {{ android_sdk_install_location }}/android-sdk-linux/tools/android update sdk --all -u -t "{{ android_sdks_to_install }}";
+expect {
+    "Do you accept the license" { exp_send "y\r" ; exp_continue }
+    eof
+}

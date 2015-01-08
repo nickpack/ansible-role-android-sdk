@@ -1,0 +1,21 @@
+---
+- name: Enable i386 arch in aptitude
+  command: dpkg --add-architecture i386
+  when: ansible_distribution_version == "14.04"
+
+- name: Install ia32-libs on 12.04
+  apt: pkg={{ item }} state=latest
+  when: ansible_distribution_version == "12.04"
+  with_items:
+    - libgd2-xpm:i386
+    - libgphoto2-2:i386
+    - libsane:i386
+    - ia32-libs-multiarch
+    - ia32-libs
+
+- name: Install build dependencies
+  apt: pkg={{ item }} state=latest
+  with_items: android_sdk_dependency_packages
+
+- name: Install Fennec build dependencies
+  command: apt-get build-dep firefox -y

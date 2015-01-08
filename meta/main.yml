@@ -1,0 +1,17 @@
+---
+galaxy_info:
+  author: Nick Pack
+  description: "Installs the Android SDK tools, SDKs themselves and applicable application build dependencies"
+  company: 0xDEADFA11 Ltd
+  license: BSD
+  min_ansible_version: 1.2
+  platforms:
+  - name: Ubuntu
+    versions:
+    - raring
+    - saucy
+    - trusty
+  categories:
+  - development
+  - system
+dependencies: []
