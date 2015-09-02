@@ -1,7 +1,7 @@
 ---
 # defaults file for android-sdk
 
-android_sdk_download_location: http://dl.google.com/android/android-sdk_r23.0.2-linux.tgz
+android_sdk_download_location: http://dl.google.com/android/android-sdk_r24.3.4-linux.tgz
 android_sdk_install_location: /opt
 
 android_sdk_dependency_packages:
