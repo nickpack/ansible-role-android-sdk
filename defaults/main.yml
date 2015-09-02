@@ -1,7 +1,7 @@
 ---
 # defaults file for android-sdk
 
-android_sdk_download_location: http://dl.google.com/android/android-sdk_r23.0.2-linux.tgz
+android_sdk_download_location: http://dl.google.com/android/android-sdk_r24.3.4-linux.tgz
 android_sdk_install_location: /opt
 
 android_sdk_dependency_packages:
@@ -20,4 +20,4 @@ android_sdk_dependency_packages:
   - "python-dev"
   - "zlibc"
 
-android_sdks_to_install: "build-tools-20.0.0,build-tools-19.1.0,platform-tools,tools,android-21,android-20,android-19,android-18,android-17,android-16,extra-android-support,extra-google-m2repository,extra-android-m2repository"
+android_sdks_to_install: "build-tools-23,build-tools-22.0.1,build-tools-21.1.2,build-tools-20.0.0,build-tools-19.1.0,platform-tools,tools,android-23,android-22,android-21,android-20,android-19,android-18,android-17,android-16,extra-android-support,extra-google-m2repository,extra-android-m2repository"

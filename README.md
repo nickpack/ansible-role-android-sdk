@@ -10,7 +10,7 @@ A recent version of Ubuntu.
 
 Available variables are listed below, along with default values (see `defaults/main.yml`):
 
-    android_sdk_download_location: http://dl.google.com/android/android-sdk_r23.0.2-linux.tgz
+    android_sdk_download_location: http://dl.google.com/android/android-sdk_r24.3.4-linux.tgz
 
 The location to the Android SDK tools package to be installed.
 
@@ -19,7 +19,7 @@ The location to the Android SDK tools package to be installed.
 The location on disk where you'd like to SDK to be installed.
 
     android_sdk_dependency_packages:
-  		- "libncurses5:i386"
+	  - "libncurses5:i386"
 		- "libstdc++6:i386"
 		- "zlib1g:i386"
 		- "imagemagick"
@@ -36,7 +36,7 @@ The location on disk where you'd like to SDK to be installed.
 
 A list of aptitude installable build dependency packages.
 
-    android_sdks_to_install: "build-tools-20.0.0,build-tools-19.1.0,platform-tools,tools,android-21,android-20,android-19,android-18,android-17,android-16,extra-android-support,extra-google-m2repository,extra-android-m2repository"
+    android_sdks_to_install: "build-tools-23,build-tools-22.0.1,build-tools-21.1.2,build-tools-20.0.0,build-tools-19.1.0,platform-tools,tools,android-23,android-22,android-21,android-20,android-19,android-18,android-17,android-16,extra-android-support,extra-google-m2repository,extra-android-m2repository"
 
 The actual Android SDK packages to install using the SDK manager.
 
