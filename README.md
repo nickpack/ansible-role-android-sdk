@@ -54,3 +54,7 @@ BSD
 ## Author Information
 
 This role was created in 2015 by [Nick Pack](https://github.com/nickpack).
+
+## Contributers
+
+* @edunham - Fixed 32bit support
