@@ -6,12 +6,7 @@
 - name: Install ia32-libs on 12.04
   apt: pkg={{ item }} state=latest
   when: ansible_distribution_version == "12.04"
-  with_items:
-    - libgd2-xpm:i386
-    - libgphoto2-2:i386
-    - libsane:i386
-    - ia32-libs-multiarch
-    - ia32-libs
+  with_items: ubuntu_precise_dependency_packages
 
 - name: Install build dependencies
   apt: pkg={{ item }} state=latest
