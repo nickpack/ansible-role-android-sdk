@@ -11,6 +11,3 @@
 - name: Install build dependencies
   apt: pkg={{ item }} state=latest
   with_items: android_sdk_dependency_packages
-
-- name: Install Fennec build dependencies
-  command: apt-get build-dep firefox -y
