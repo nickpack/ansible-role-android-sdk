@@ -4,7 +4,7 @@
 android_sdk_download_location: http://dl.google.com/android/android-sdk_r24.4.1-linux.tgz
 android_sdk_install_location: /opt
 
-android_sdk_dependency_packages:
+ubuntu_dependency_packages:
   - "libncurses5"
   - "libstdc++6"
   - "zlib1g"
@@ -26,7 +26,7 @@ ubuntu_precise_dependency_packages:
   - "libsane"
   - "ia32-libs-multiarch"
 
-fedora_dependency_packages:
+rh_dependency_packages:
   - expect
   - libstdc++.i686
   - mesa-libGL-devel

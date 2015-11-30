@@ -3,17 +3,17 @@
   command: dpkg --add-architecture i386
   when: (ansible_distribution == "Ubuntu" or ansible_distribution == "Linuxmint") and ansible_distribution_version == "14.04"
 
-- name: Install ia32-libs on 12.04
+- name: Install ia32-libs on Ubuntu 12.04
   apt: pkg={{ item }} state=latest
   when: (ansible_distribution == "Ubuntu" or ansible_distribution == "Linuxmint") and ansible_distribution_version == "12.04"
   with_items: ubuntu_precise_dependency_packages
 
-- name: Install build dependencies
+- name: Install build dependencies on Ubuntu
   apt: pkg={{ item }} state=latest
   when: ansible_distribution == "Ubuntu" or ansible_distribution == "Linuxmint"
-  with_items: android_sdk_dependency_packages
+  with_items: ubuntu_dependency_packages
 
-- name: Install i386 dependencies in Fedora, RedHat, CentOS, et al.
+- name: Install i386 dependencies on RH family
   yum: pkg={{ item }} state=latest
   when: ansible_distribution == "Fedora" or ansible_distribution == "CentOS" or ansible_distribution == "RedHat"
-  with_items: fedora_dependency_packages
+  with_items: rh_dependency_packages
