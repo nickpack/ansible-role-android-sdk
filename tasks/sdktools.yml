@@ -16,7 +16,7 @@
   file: path={{ android_sdk_install_location }}/android-sdk-linux recurse=yes mode=0755
 
 - name: Set system wide PATH to contain Android SDK tools
-  lineinfile: dest=/etc/environment regexp=^PATH line='PATH="/usr/local/sbin:/usr/local/bin:{{ android_sdk_install_location }}/android-sdk-linux/build-tools/20.0.0:{{ android_sdk_install_location }}/android-sdk-linux/tools/:{{ android_sdk_install_location }}/android-sdk-linux/build-tools/:{{ android_sdk_install_location }}/android-sdk-linux/platform-tools/:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games"'
+  lineinfile: dest=/etc/environment regexp=^PATH line='PATH="/usr/local/sbin:/usr/local/bin:{{ android_sdk_install_location }}/android-sdk-linux/build-tools/{{ android_sdk_base_buildtools_version }}:{{ android_sdk_install_location }}/android-sdk-linux/tools/:{{ android_sdk_install_location }}/android-sdk-linux/build-tools/:{{ android_sdk_install_location }}/android-sdk-linux/platform-tools/:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games"'
   when: android_sdk_update_path
 
 - name: Set system wide ANDROID_HOME environment variable
