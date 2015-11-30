@@ -11,6 +11,14 @@ galaxy_info:
     - raring
     - saucy
     - trusty
+  - name: Fedora
+    versions:
+    - 18
+    - 22
+    - 23
+  - name: CentOS
+    versions:
+    - 6
   categories:
   - development
   - system
