@@ -5,9 +5,9 @@ android_sdk_download_location: http://dl.google.com/android/android-sdk_r24.4.1-
 android_sdk_install_location: /opt
 
 ubuntu_dependency_packages:
-  - "libncurses5"
-  - "libstdc++6"
-  - "zlib1g"
+  - "libncurses5:i386"
+  - "libstdc++6:i386"
+  - "zlib1g:i386"
   - "imagemagick"
   - "expect"
   - "gradle"
