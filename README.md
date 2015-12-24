@@ -61,7 +61,21 @@ Whether or not the role should update the PATH in /etc/environment with the rele
 
 The main build tools version from the SDK to use, mainly useful for PATH updates.
 
-    android_sdks_to_install: "build-tools-20.0.0,build-tools-19.1.0,platform-tools,tools,android-21,android-20,android-19,android-18,android-17,android-16,extra-android-support,extra-google-m2repository,extra-android-m2repository"
+    android_sdk_tools_to_install:
+      - build-tools-20.0.0
+      - build-tools-19.1.0
+      - platform-tools
+      - tools
+      - extra-android-support
+      - extra-google-m2repository
+      - extra-android-m2repository
+    android_sdks_to_install:
+      - android-21
+      - android-20
+      - android-19
+      - android-18
+      - android-17
+      - android-16
 
 The actual Android SDK packages to install using the SDK manager.
 
