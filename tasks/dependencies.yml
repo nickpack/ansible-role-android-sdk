@@ -1,6 +1,6 @@
 ---
 - name: Enable i386 arch in aptitude
-  command: dpkg --add-architecture i386
+  command: dpkg --add-architecture i386 && apt-get update
   when: (ansible_distribution == "Ubuntu" or ansible_distribution == "Linuxmint") and ansible_distribution_version == "14.04"
 
 - name: Install ia32-libs on Ubuntu 12.04
