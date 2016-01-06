@@ -1,7 +1,19 @@
 ---
-- name: Enable i386 arch in aptitude
-  command: dpkg --add-architecture i386 && apt-get update
+
+- name: Check if i386 is enabled
+  shell: dpkg --print-foreign-architectures | grep i386
+  register: result_i386_check
+  changed_when: result_i386_check.rc == 1
+  failed_when: result_i386_check.rc > 1
   when: (ansible_distribution == "Ubuntu" or ansible_distribution == "Linuxmint") and ansible_distribution_version == "14.04"
+
+- name: Enable i386 arch in aptitude
+  command: dpkg --add-architecture i386
+  when: (ansible_distribution == "Ubuntu" or ansible_distribution == "Linuxmint") and ansible_distribution_version == "14.04" and result_i386_check.rc == 1
+
+- name: Ensure apt cache is up to date
+  apt: update_cache=yes
+  when: (ansible_distribution == "Ubuntu" or ansible_distribution == "Linuxmint") and result_i386_check.rc == 1
 
 - name: Install ia32-libs on Ubuntu 12.04
   apt: pkg={{ item }} state=latest
