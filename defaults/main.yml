@@ -37,4 +37,18 @@ android_sdk_update_path: true
 
 android_sdk_base_buildtools_version: 23.0.2 # Used for PATH when android_sdk_update_path is true
 
-android_sdks_to_install: "build-tools-{{ android_sdk_base_buildtools_version }},build-tools-19.1.0,platform-tools,tools,android-21,android-20,android-19,android-18,android-17,android-16,extra-android-support,extra-google-m2repository,extra-android-m2repository"
+android_sdk_tools_to_install:
+      - "build-tools-{{ android_sdk_base_buildtools_version }}"
+      - build-tools-19.1.0
+      - platform-tools
+      - tools
+      - extra-android-support
+      - extra-google-m2repository
+      - extra-android-m2repository
+android_sdks_to_install:
+      - android-21
+      - android-20
+      - android-19
+      - android-18
+      - android-17
+      - android-16
