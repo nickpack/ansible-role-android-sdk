@@ -1,0 +1,4 @@
+---
+
+- name: Install Android SDKs for applicable releases
+  command: "{{ ansible_env.HOME }}/sdk-install.expect"

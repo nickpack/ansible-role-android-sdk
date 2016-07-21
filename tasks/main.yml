@@ -1,5 +1,8 @@
 ---
-# tasks file for android-sdk
-- include: dependencies.yml
-- include: sdktools.yml
-- include: sdksinstall.yml
+- include_vars: "{{ansible_os_family}}.yml"
+
+- include: setup-Darwin.yml
+  when: ansible_os_family == "Darwin"
+
+- include: setup-Debian.yml
+  when: ansible_os_family == "Debian"

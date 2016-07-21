@@ -1,0 +1,3 @@
+---
+android_sdk_install_location: /usr/local/bin
+android_executable: "{{ android_sdk_install_location }}/android"

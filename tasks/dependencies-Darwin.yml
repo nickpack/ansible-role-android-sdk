@@ -1,0 +1,5 @@
+---
+ - name: Install dependencies (Darwin)
+   homebrew: name={{item}} update_homebrew=yes state=latest
+   with_items:
+     - android-sdk
