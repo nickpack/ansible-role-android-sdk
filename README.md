@@ -100,3 +100,4 @@ This role was created in 2015 by [Nick Pack](https://github.com/nickpack).
 * @halkeye - Seperated SDK tools, fixed 64bit environment
 * @edunham - Fixed 32bit support
 * @peterjanes - Added RedHat family support
+* @conorsch - Changed conditionals to allow > 14.04 support
