@@ -11,6 +11,7 @@ galaxy_info:
     - raring
     - saucy
     - trusty
+    - xenial
   - name: Fedora
     versions:
     - 18
