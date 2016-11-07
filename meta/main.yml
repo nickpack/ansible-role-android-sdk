@@ -17,10 +17,14 @@ galaxy_info:
     - 18
     - 22
     - 23
-  - name: CentOS
+  - name: EL
     versions:
     - 6
-  categories:
+    - 7
+  galaxy_tags:
   - development
   - system
+  - android
+  - android-sdk
+  - adb
 dependencies: []
