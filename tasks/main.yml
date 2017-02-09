@@ -1,6 +1,8 @@
 ---
 # tasks file for android-sdk
-- include_vars: "{{ item }}"
+- name: Include platform specific include_vars
+  include_vars: "{{ item }}"
+    dir: 'vars'
   with_first_found:
     - "{{ ansible_distribution }}.yml"
     - "{{ ansible_os_family }}.yml"
