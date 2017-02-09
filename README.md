@@ -85,7 +85,7 @@ The actual Android SDK packages to install using the SDK manager.
       vars_files:
         - vars/main.yml
       roles:
-        - { role: nickp666.android-sdk }
+        - { role: nickpack.android-sdk }
 
 ## License
 
@@ -97,6 +97,7 @@ This role was created in 2015 by [Nick Pack](https://github.com/nickpack).
 
 ## Contributors
 
+* @rodrigdav - Fixed bare variables that broke 2.2 compatibility
 * @halkeye - Seperated SDK tools, fixed 64bit environment
 * @edunham - Fixed 32bit support
 * @peterjanes - Added RedHat family support
