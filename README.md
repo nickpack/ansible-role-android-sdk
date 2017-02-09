@@ -1,5 +1,7 @@
 # Ansible Role: Android SDK
 
+[![Build Status](https://travis-ci.org/nickpack/ansible-role-android-sdk.svg?branch=master)](https://travis-ci.org/nickpack/ansible-role-android-sdk)
+
 An Ansible Role that installs the Android SDK tools, SDK packages and dependencies on Ubuntu and RedHat based OS'.
 
 ## Requirements
