@@ -1,0 +1,23 @@
+---
+
+dependency_packages:
+  - "libncurses5:i386"
+  - "libstdc++6:i386"
+  - "zlib1g:i386"
+  - "imagemagick"
+  - "expect"
+  - "gradle"
+  - "ant"
+  - "ccache"
+  - "autoconf"
+  - "automake"
+  - "ant"
+  - "ccache"
+  - "python-dev"
+  - "zlibc"
+
+ubuntu_precise_dependency_packages:
+  - "libgd2-xpm"
+  - "libgphoto2-2"
+  - "libsane"
+  - "ia32-libs-multiarch"

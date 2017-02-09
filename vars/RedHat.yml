@@ -1,0 +1,8 @@
+---
+
+dependency_packages:
+  - expect
+  - libstdc++.i686
+  - mesa-libGL-devel
+  - ncurses-libs.i686
+  - zlib.i686

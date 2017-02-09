@@ -1,5 +1,12 @@
 ---
 # tasks file for android-sdk
-- include: dependencies.yml
+- include_vars: "{{ item }}"
+  with_first_found:
+    - "{{ ansible_distribution }}.yml"
+    - "{{ ansible_os_family }}.yml"
+    - "default.yml"
+# This is risky if run on a non-supported platform, but the include module does not support with_first_found
+- include: dependencies-{{ ansible_os_family }}.yml
+
 - include: sdktools.yml
 - include: sdksinstall.yml

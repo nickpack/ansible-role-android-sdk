@@ -3,40 +3,8 @@
 
 android_sdk_download_location: http://dl.google.com/android/android-sdk_r24.4.1-linux.tgz
 android_sdk_install_location: /opt
-
-ubuntu_dependency_packages:
-  - "libncurses5:i386"
-  - "libstdc++6:i386"
-  - "zlib1g:i386"
-  - "imagemagick"
-  - "expect"
-  - "gradle"
-  - "ant"
-  - "ccache"
-  - "autoconf"
-  - "automake"
-  - "ant"
-  - "ccache"
-  - "python-dev"
-  - "zlibc"
-
-ubuntu_precise_dependency_packages:
-  - "libgd2-xpm"
-  - "libgphoto2-2"
-  - "libsane"
-  - "ia32-libs-multiarch"
-
-rh_dependency_packages:
-  - expect
-  - libstdc++.i686
-  - mesa-libGL-devel
-  - ncurses-libs.i686
-  - zlib.i686
-
 android_sdk_update_path: true
-
 android_sdk_base_buildtools_version: 23.0.2 # Used for PATH when android_sdk_update_path is true
-
 android_sdk_tools_to_install:
       - "build-tools-{{ android_sdk_base_buildtools_version }}"
       - build-tools-19.1.0
