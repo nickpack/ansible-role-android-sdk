@@ -1,8 +1,11 @@
 ---
-- include_vars: "{{ansible_os_family}}.yml"
+- name: "Include vars for current OS family"
+  include_vars: "{{ansible_os_family}}.yml"
 
-- include: setup-Darwin.yml
+- name: "Darwin installation"
+  include: setup-Darwin.yml
   when: ansible_os_family == "Darwin"
 
-- include: setup-Debian.yml
+- name: "Debian derivative installation"
+  include: setup-Debian.yml
   when: ansible_os_family == "Debian"
