@@ -1,0 +1,2 @@
+---
+android_executable: "{{ android_sdk_install_location }}/android-sdk-linux/tools/android"

@@ -1,0 +1,4 @@
+---
+
+- name: Put the SDK install expect script in place
+  template: src=sdk-install.expect.j2 dest={{ ansible_env.HOME }}/sdk-install.expect mode=0755
