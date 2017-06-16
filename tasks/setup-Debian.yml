@@ -1,0 +1,4 @@
+---
+- include: dependencies-Debian.yml
+- include: sdktools-Debian.yml
+- include: sdksinstall-Debian.yml
