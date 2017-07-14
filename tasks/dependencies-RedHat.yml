@@ -1,0 +1,6 @@
+---
+  
+- name: Install i386 dependencies on RH family
+  yum: pkg={{ item }} state=present
+  when: ansible_distribution == "Fedora" or ansible_distribution == "CentOS" or ansible_distribution == "RedHat"
+  with_items: "{{ rh_dependency_packages }}"
