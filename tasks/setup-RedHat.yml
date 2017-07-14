@@ -1,4 +1,4 @@
 ---
-- include: dependencies-Debian.yml
+- include: dependencies-RedHat.yml
 - include: sdktools-Linux.yml
 - include: sdksinstall-Linux.yml
