@@ -5,6 +5,6 @@
     - "{{ ansible_distribution }}.yml"
     - "{{ ansible_os_family }}.yml"
     - "default.yml"
-    
+
 # This is risky if run on a non-supported platform, but the include module does not support with_first_found
 - include: setup-{{ ansible_os_family }}.yml
