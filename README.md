@@ -99,6 +99,7 @@ This role was created in 2015 by [Nick Pack](https://github.com/nickpack).
 
 ## Contributors
 
+* @timdaman - Fixed defect in variable loading
 * @ojechev-broadsoft - OSX Support
 * @rodrigdav - Fixed bare variables that broke 2.2 compatibility
 * @halkeye - Seperated SDK tools, fixed 64bit environment
