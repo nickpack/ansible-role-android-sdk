@@ -87,7 +87,7 @@ The actual Android SDK packages to install using the SDK manager.
       vars_files:
         - vars/main.yml
       roles:
-        - { role: nickpack.android-sdk }
+        - { role: nickpack.android_sdk }
 
 ## License
 
